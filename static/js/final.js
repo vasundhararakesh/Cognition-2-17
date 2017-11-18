@@ -8,7 +8,7 @@ $(function(){
                 dataType : 'json', 
     			success: function(response){
 	    			console.log(response);
-                    window.location.href="/startTrial";
+                    window.location.href="/finish";
 			    },
     			err: function(error){
 	    			console.log("error");
