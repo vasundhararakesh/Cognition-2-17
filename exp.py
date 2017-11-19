@@ -17,7 +17,7 @@ def submitDetails():
 	fil.write('\n')
 	fil.close()
 	return render_template("index.html")
-
+	
 @app.route("/startTrial")
 def showTask():
 	return render_template("task.html")
@@ -33,7 +33,7 @@ def showReturn():
 @app.route("/logData", methods=["POST","GET"])
 def logData():
 	data = request.form['json']
-	with open("data2_log.txt", mode="a") as f:
+	with open("log.txt", mode="a") as f:
 		f.write("\n")
 		f.write(data)
 	return render_template("task.html")
