@@ -3,11 +3,10 @@ $(function(){
 		if ( e.which == 68 ){
 			$.ajax({
 				url: '/data',
-				data: JSON.stringify(data),
+				data: { json : JSON.stringify(data)},
 				type: 'POST',
-				dataType: 'json',
-				success: function(response){
-					console.log(response);
+    			success: function(response){
+					console.log("success");
                 	window.location.href="/endTrial";
 				},
 				err: function(error){
